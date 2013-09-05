@@ -1,4 +1,17 @@
 angular.module('app', ['app.finance.controllers', 'app.components'])
+    .config(['$routeProvider', function ($routeProvider) {
+        console.log('Configuring Angular    Route Provider...');
+        $routeProvider
+            .when('/main', {
+//                controller: 'MainCtrl',
+                templateUrl: 'templates/content/main.html'
+            })
+            .when('/css', {
+//                controller: 'ViewCtrl',
+                templateUrl: 'templates/content/css.html'
+            })
+            .otherwise({redirectTo: '/main'});
+    }])
     .controller('AppCtrl', function ($scope) {
         $scope.name = 'App Controller';
 
