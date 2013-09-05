@@ -1,6 +1,5 @@
 angular.module('app', ['app.finance.controllers', 'app.components'])
     .config(['$routeProvider', function ($routeProvider) {
-        console.log('Configuring Angular    Route Provider...');
         $routeProvider
             .when('/main', {
 //                controller: 'MainCtrl',
