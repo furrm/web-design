@@ -18,7 +18,8 @@ angular.module('app.components', [])
             templateUrl: 'templates/off-canvas-menu.html',
             link: function (scope, element, attrs, controller) {
 
-                var inactiveCssClass = 'k-menu k-menu-vertical k-menu-left';
+//                var inactiveCssClass = 'k-menu k-menu-vertical k-menu-left';
+                var inactiveCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';  // force open for dev
                 var activeCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';
 
 
@@ -55,17 +56,25 @@ angular.module('app.components', [])
             templateUrl: 'templates/off-canvas.html',
             controller: function ($scope) {
 
-
+                // Menu specific classes
                 var menuOpenCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';
+//                var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open'; // force open for dev
                 var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left';
 
+                // main specific classes
                 var mainOpenCssClass = 'k-main-push k-main-push-toright'
+//                var mainCloseCssClass = 'k-main-push k-main-push-toright' // force open for dev
                 var mainCloseCssClass = 'k-main-push'
+
+                // mask specific classes
+                var maskActiveCssClass = "k-main-mask k-main-mask-menu-open";
+                var maskInactiveCssClass = "k-main-mask";
 
                 var menuIsOpen = 0;
 
                 $scope.menuCss = menuCloseCssClass;
                 $scope.mainCss = mainCloseCssClass;
+                $scope.maskCss = maskInactiveCssClass;
 
                 $scope.toggleMenuState = function(){
 
@@ -74,11 +83,13 @@ angular.module('app.components', [])
 //                       alert('Close the menu...');
                         $scope.menuCss = menuCloseCssClass;
                         $scope.mainCss = mainCloseCssClass;
+                        $scope.maskCss = maskInactiveCssClass
                     }   else // then open it
                     {
 //                        alert('Open the menu...');
                         $scope.menuCss = menuOpenCssClass;
                         $scope.mainCss = mainOpenCssClass;
+                        $scope.maskCss = maskActiveCssClass
 
                     }
 

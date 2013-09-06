@@ -1,9 +1,9 @@
-<div>
+<div class="off-canvas-container">
     <nav ng-class="menuCss" class="k-bg-black">
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" ng-click="toggleMenuState()"><i class="icon-remove"></i> </a>
+                    <a ng-click="toggleMenuState()"><i class="icon-remove"></i> </a>
                 </li>
             </ul>
         </nav>
@@ -13,11 +13,12 @@
             <li><a href="#">Test</a></li>
         </ul>
     </nav>
+    <a ng-class="maskCss"></a>
     <div id="content" ng-class=mainCss>
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" ng-click="toggleMenuState()"><i class="icon-reorder icon-2x"></i></a>
+                    <a ng-click="toggleMenuState()"><i class="icon-reorder icon-2x"></i></a>
                  </li>
             </ul>
         </nav>

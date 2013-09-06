@@ -1,6 +1,11 @@
 //vars
 @menuWidth:300px;
 
+.off-canvas-container{
+//  background-color: green;
+  height: 100%;
+
+}
 
 /* General styles for all menus */
 
@@ -36,17 +41,43 @@
   overflow-x: hidden;
   position: relative;
   left: 0;
+  height: 100%;
+
 }
 
 .k-main-push-toright {
+  left: @menuWidth;
+
+
+}
+
+.k-main-mask{
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1002;
+  background-color: black;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+
+.k-main-mask-menu-open{
+  visibility: visible;
   left: @menuWidth;
 }
 
 /* Transitions */
 
 .k-menu,
-.k-main-push {
+.k-main-push,
+.k-main-mask{
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
+
