@@ -9,63 +9,64 @@
  */
 
 // Core variables and mixins
-@import "variables.less";
-@import "mixins.less";
+@import "bootstrap-3.0.0/variables";
+@import "bootstrap-3.0.0/mixins";
 
   // Reset
-@import "normalize.less";
-@import "print.less";
+@import "bootstrap-3.0.0/normalize";
+@import "bootstrap-3.0.0/print";
 
   // Core CSS
-@import "scaffolding.less";
-@import "type.less";
-@import "code.less";
-@import "grid.less";
-@import "tables.less";
-@import "forms.less";
-@import "buttons.less";
+@import "bootstrap-3.0.0/scaffolding";
+@import "bootstrap-3.0.0/type";
+@import "bootstrap-3.0.0/code";
+@import "bootstrap-3.0.0/grid";
+@import "bootstrap-3.0.0/tables";
+@import "bootstrap-3.0.0/forms";
+@import "bootstrap-3.0.0/buttons";
 
   // Components
-@import "component-animations.less";
-@import "glyphicons.less";
-@import "dropdowns.less";
-@import "button-groups.less";
-@import "input-groups.less";
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
-@import "labels.less";
-@import "badges.less";
-@import "jumbotron.less";
-@import "thumbnails.less";
-@import "alerts.less";
-@import "progress-bars.less";
-@import "media.less";
-@import "list-group.less";
-@import "panels.less";
-@import "wells.less";
-@import "close.less";
+@import "bootstrap-3.0.0/component-animations";
+@import "bootstrap-3.0.0/glyphicons";
+@import "bootstrap-3.0.0/dropdowns";
+@import "bootstrap-3.0.0/button-groups";
+@import "bootstrap-3.0.0/input-groups";
+@import "bootstrap-3.0.0/navs";
+@import "bootstrap-3.0.0/navbar";
+@import "bootstrap-3.0.0/breadcrumbs";
+@import "bootstrap-3.0.0/pagination";
+@import "bootstrap-3.0.0/pager";
+@import "bootstrap-3.0.0/labels";
+@import "bootstrap-3.0.0/badges";
+@import "bootstrap-3.0.0/jumbotron";
+@import "bootstrap-3.0.0/thumbnails";
+@import "bootstrap-3.0.0/alerts";
+@import "bootstrap-3.0.0/progress-bars";
+@import "bootstrap-3.0.0/media";
+@import "bootstrap-3.0.0/list-group";
+@import "bootstrap-3.0.0/panels";
+@import "bootstrap-3.0.0/wells";
+@import "bootstrap-3.0.0/close";
 
   // Components w/ JavaScript
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";
+@import "bootstrap-3.0.0/modals";
+@import "bootstrap-3.0.0/tooltip";
+@import "bootstrap-3.0.0/popovers";
+@import "bootstrap-3.0.0/carousel";
 
   // Utility classes
-@import "utilities.less";
-@import "responsive-utilities.less";
+@import "bootstrap-3.0.0/utilities";
+@import "bootstrap-3.0.0/responsive-utilities";
 
 
 
 
-@import "variables-k";
+@import "variables-k.less";
+@import "menu-side.less";
 
 
 
-/*! kapcha bootstrap overrides for navbar.less */
+/*! kapcha start:navbar */
 
 .navbar{
   .navbar;
@@ -87,3 +88,34 @@
 
   }
 }
+
+/*! kapcha end:navbar */
+
+/*! kapcha start:navbar-menu-side */
+
+.menu-side{
+  background-color: @black2;
+}
+
+.navbar-menu-side{
+  .navbar;
+
+}
+
+.navbar-menu-side-default{
+  .navbar-default;
+
+}
+
+//@media (min-width: 768px) {
+//  .navbar-menu-side {
+//    background-color: @green5;
+//     border-radius: 0px;
+//  }
+//}
+
+/*! kapcha end:navbar-menu-side */
+
+
+
+

@@ -53,7 +53,7 @@ angular.module('app.components', [])
     }).directive('offCanvas', function () {
         return{
             restrict: 'E',
-            templateUrl: 'templates/off-canvas.html',
+            templateUrl: 'templates/components/off-canvas.html',
             controller: function ($scope) {
 
                 // Menu specific classes
@@ -76,15 +76,15 @@ angular.module('app.components', [])
                 $scope.mainCss = mainCloseCssClass;
                 $scope.maskCss = maskInactiveCssClass;
 
-                $scope.toggleMenuState = function(){
+                $scope.toggleMenuState = function () {
 
-                    if(menuIsOpen) // then close it...
+                    if (menuIsOpen) // then close it...
                     {
 //                       alert('Close the menu...');
                         $scope.menuCss = menuCloseCssClass;
                         $scope.mainCss = mainCloseCssClass;
                         $scope.maskCss = maskInactiveCssClass
-                    }   else // then open it
+                    } else // then open it
                     {
 //                        alert('Open the menu...');
                         $scope.menuCss = menuOpenCssClass;
@@ -100,5 +100,23 @@ angular.module('app.components', [])
             },
             transclude: true,
             replace: true
+        }
+    })
+    .directive('menuHeader', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu-header.html'
+        }
+    })
+    .directive('menuSide', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu-side.html'
+        }
+    })
+    .directive('menuSearch', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu-search.html'
         }
     });
