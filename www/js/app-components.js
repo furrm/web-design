@@ -97,6 +97,15 @@ angular.module('app.components', [])
 
                 }
 
+                var selectedMatterId = 'Nothing Selected!!';
+
+                this.switchMatter = function(args){
+//                    alert(args);
+                    $scope.selectedMatter = args;
+                }
+
+//                $scope.selectedMatter = selectedMatterId;
+
             },
             transclude: true,
             replace: true
@@ -112,6 +121,11 @@ angular.module('app.components', [])
         return{
             restrict: 'E',
             templateUrl: 'templates/components/menu-side.html'
+//            controller:function(){
+//                this.doSomething = function(){
+//                    alert('Doing Something =)');
+//                };
+//            }
         }
     })
     .directive('menuSearch', function () {
@@ -122,6 +136,18 @@ angular.module('app.components', [])
     }).directive('menuSearchResults', function () {
         return{
             restrict: 'E',
-            templateUrl: 'templates/components/menu-search-results.html'
+            templateUrl: 'templates/components/menu-search-results.html',
+            require: '^offCanvas',
+            link:function(scope, element, attribute, offCanvasCtrl){
+
+
+
+                scope.switch = function(args){
+//                       alert(args);
+                    offCanvasCtrl.switchMatter(args);
+                }
+
+            }
+
         }
     });

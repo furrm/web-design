@@ -11,9 +11,12 @@ angular.module('app', ['app.finance.controllers', 'app.components'])
             })
             .otherwise({redirectTo: '/main'});
     }])
-    .controller('AppCtrl', function ($scope) {
+    .controller('appCtrl', function ($scope) {
         $scope.name = 'App Controller';
 
+//        $scope.switchMatter = function(args){
+//            alert(args);
+//        }
 
 //        var menu = {
 //            menuState:false,
@@ -30,12 +33,5 @@ angular.module('app', ['app.finance.controllers', 'app.components'])
 //            $scope.isActive = !$scope.isActive;
 //        };
 
-        var selectedMatterId = 'Nothing Selected!!';
-
-        $scope.switchMatter = function(){
-                  alert('arg');
-        }
-
-        $scope.selectedMatter = selectedMatterId;
 
     });
