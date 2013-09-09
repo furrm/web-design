@@ -45,6 +45,9 @@
   color: #727272;
   text-transform: uppercase;
 }
+.k-menu-textbox {
+  width: 80%;
+}
 /* Vertical menu that slides from the left or right */
 .k-menu-left {
   left: -300px;
