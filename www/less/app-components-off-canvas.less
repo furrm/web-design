@@ -1,11 +1,53 @@
+//imports
+//@import "../libs/kapcha-bootstrap-1.0.0/less/variables-k.less";
+
 //vars
 @menuWidth:300px;
+@off-canvas-nav-background: #1B1E1F;
+@off-canvas-menu-background:#333;
+@off-canvas-menu-section-title:#727272;
+
+
+//@side-menu-background:#1B1E1F;
 
 .off-canvas-container{
 //  background-color: green;
   height: 100%;
 
 }
+
+.off-canvas-navbar{
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.off-canvas-navbar-default{
+  display: table;
+  vertical-align: middle;
+//  text-align: center;
+  background-color: @off-canvas-nav-background;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.off-canvas-nav{
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  background-color: transparent;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navbar-font-height{font-size: 40px;}
 
 /* General styles for all menus */
 
@@ -23,6 +65,12 @@
   height: 100%;
   top: 0;
   z-index: 1000;
+  background-color: @off-canvas-menu-background;
+}
+
+.k-menu-section-title{
+  color: @off-canvas-menu-section-title;
+  text-transform: uppercase;
 }
 
 /* Vertical menu that slides from the left or right */
@@ -62,7 +110,7 @@
   background-color: black;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=70);
 }
 
 .k-main-mask-menu-open{
