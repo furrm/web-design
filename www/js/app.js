@@ -15,19 +15,27 @@ angular.module('app', ['app.finance.controllers', 'app.components'])
         $scope.name = 'App Controller';
 
 
-        var menu = {
-            menuState:false,
-            toggle: function(){
-                    if(!this.menuState){this.menuState = true;}else{this.menuState = false;}
-            }
-        };
+//        var menu = {
+//            menuState:false,
+//            toggle: function(){
+//                    if(!this.menuState){this.menuState = true;}else{this.menuState = false;}
+//            }
+//        };
 
-        $scope.menu = menu;
+//        $scope.menu = menu;
 
-        $scope.isActive = false;
+//        $scope.isActive = false;
 
-        $scope.toggleMenu = function () {
-            $scope.isActive = !$scope.isActive;
-        };
+//        $scope.toggleMenu = function () {
+//            $scope.isActive = !$scope.isActive;
+//        };
+
+        var selectedMatterId = 'Nothing Selected!!';
+
+        $scope.switchMatter = function(){
+                  alert('arg');
+        }
+
+        $scope.selectedMatter = selectedMatterId;
 
     });

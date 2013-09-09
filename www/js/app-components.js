@@ -119,4 +119,9 @@ angular.module('app.components', [])
             restrict: 'E',
             templateUrl: 'templates/components/menu-search.html'
         }
+    }).directive('menuSearchResults', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu-search-results.html'
+        }
     });

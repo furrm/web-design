@@ -41,9 +41,18 @@
   z-index: 1000;
   background-color: #333333;
 }
+.k-menu-section {
+  color: #faf9fd;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #727272;
+}
 .k-menu-section-title {
   color: #727272;
   text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .k-menu-textbox {
   width: 80%;
