@@ -50,63 +50,12 @@ angular.module('app.components', [])
 
 
         };
-    }).directive('offCanvas', function () {
+    })
+    .directive('offCanvas', function () {
         return{
             restrict: 'E',
             templateUrl: 'templates/components/off-canvas.html',
-            controller: function ($scope) {
-
-                // Menu specific classes
-                var menuOpenCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';
-//                var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open'; // force open for dev
-                var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left';
-
-                // main specific classes
-                var mainOpenCssClass = 'k-main-push k-main-push-toright'
-//                var mainCloseCssClass = 'k-main-push k-main-push-toright' // force open for dev
-                var mainCloseCssClass = 'k-main-push'
-
-                // mask specific classes
-                var maskActiveCssClass = "k-main-mask k-main-mask-menu-open";
-                var maskInactiveCssClass = "k-main-mask";
-
-                var menuIsOpen = 0;
-
-                $scope.menuCss = menuCloseCssClass;
-                $scope.mainCss = mainCloseCssClass;
-                $scope.maskCss = maskInactiveCssClass;
-
-                $scope.toggleMenuState = function () {
-
-                    if (menuIsOpen) // then close it...
-                    {
-//                       alert('Close the menu...');
-                        $scope.menuCss = menuCloseCssClass;
-                        $scope.mainCss = mainCloseCssClass;
-                        $scope.maskCss = maskInactiveCssClass
-                    } else // then open it
-                    {
-//                        alert('Open the menu...');
-                        $scope.menuCss = menuOpenCssClass;
-                        $scope.mainCss = mainOpenCssClass;
-                        $scope.maskCss = maskActiveCssClass
-
-                    }
-
-                    menuIsOpen = !menuIsOpen;
-
-                }
-
-                var selectedMatterId = 'Nothing Selected!!';
-
-                this.switchMatter = function(args){
-//                    alert(args);
-                    $scope.selectedMatter = args;
-                }
-
-//                $scope.selectedMatter = selectedMatterId;
-
-            },
+            controller: 'AppCtrl',
             transclude: true,
             replace: true
         }
@@ -128,26 +77,50 @@ angular.module('app.components', [])
 //            }
         }
     })
-    .directive('menuSearch', function () {
+    .directive('menuSearch',function () {
         return{
             restrict: 'E',
             templateUrl: 'templates/components/menu-search.html'
         }
-    }).directive('menuSearchResults', function () {
+    }).directive('menuSearchResults',function () {
         return{
             restrict: 'E',
             templateUrl: 'templates/components/menu-search-results.html',
-            require: '^offCanvas',
-            link:function(scope, element, attribute, offCanvasCtrl){
+            require: '^offCanvas',  // use the offCanvas controller
+            link: function (scope, element, attribute, offCanvasCtrl) {
 
-
-
-                scope.switch = function(args){
-//                       alert(args);
-                    offCanvasCtrl.switchMatter(args);
-                }
+//                scope.switch = function (args) {
+//                    offCanvasCtrl.switchMatter(args);
+//                }
 
             }
 
         }
-    });
+    }).directive('panel',function () {
+        return{
+            restrict: 'E',
+            replace: 'true',
+            scope:true,
+            templateUrl: 'templates/components/panel.html',
+            require: '^offCanvas',
+            link:function(scope, element, attribute, appCtrl){
+
+            },
+            controller: '@',
+            name: 'ctrl'
+        }
+    })
+    .controller('MatterInfoCtrl', function($scope){
+        $scope.panelName = 'Matter Info';
+    })
+    .controller('MatterOverviewLifeToDateCtrl', function($scope){
+        $scope.panelName = 'Matter Overview Life To Date';
+    })
+    .controller('WorkInProgressCtrl', function($scope){
+        $scope.panelName = 'Work In Progress';
+    })
+    .controller('UnpaidInvoicesCtrl', function($scope){
+        $scope.panelName = 'Unpaid Invoices';
+    })
+
+;
