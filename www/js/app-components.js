@@ -9,7 +9,7 @@
 'use strict';
 
 angular.module('app.components', [])
-    .directive('offcanvasmenu',function () {
+    .directive('offcanvasmenu', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -96,31 +96,107 @@ angular.module('app.components', [])
             }
 
         }
-    }).directive('panel',function () {
+    }).directive('panel', function () {
         return{
             restrict: 'E',
             replace: 'true',
-            scope:true,
+            scope: true,
             templateUrl: 'templates/components/panel.html',
             require: '^offCanvas',
-            link:function(scope, element, attribute, appCtrl){
+            link: function (scope, element, attribute, appCtrl) {
 
             },
             controller: '@',
             name: 'ctrl'
         }
     })
-    .controller('MatterInfoCtrl', function($scope){
+    .controller('MatterInfoCtrl', function ($scope) {
         $scope.panelName = 'Matter Info';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
     })
-    .controller('MatterOverviewLifeToDateCtrl', function($scope){
+    .controller('MatterOverviewLifeToDateCtrl', function ($scope) {
         $scope.panelName = 'Matter Overview Life To Date';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
     })
-    .controller('WorkInProgressCtrl', function($scope){
+    .controller('WorkInProgressCtrl', function ($scope) {
         $scope.panelName = 'Work In Progress';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
     })
-    .controller('UnpaidInvoicesCtrl', function($scope){
+    .controller('UnpaidInvoicesCtrl', function ($scope) {
         $scope.panelName = 'Unpaid Invoices';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
     })
 
 ;

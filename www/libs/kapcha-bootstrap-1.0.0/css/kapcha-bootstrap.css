@@ -5907,6 +5907,9 @@ td.visible-print {
   }
 }
 /*! kapcha bootstrap overrides for variables.less */
+.main-container {
+  margin-top: 20px;
+}
 /*! kapcha start:navbar */
 .navbar {
   position: relative;
