@@ -5948,8 +5948,59 @@ td.visible-print {
 .table-finance td {
   text-align: right;
 }
+.mfia-panel-wrapper a {
+  text-decoration: none;
+}
+.mfia-panel {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.mfia-panel > .list-group {
+  margin-bottom: 0;
+}
+.mfia-panel > .list-group .list-group-item {
+  border-width: 1px 0;
+}
+.mfia-panel > .list-group .list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.mfia-panel > .list-group .list-group-item:last-child {
+  border-bottom: 0;
+}
+.mfia-panel > .table {
+  margin-bottom: 0;
+}
+.mfia-panel > .panel-body + .table {
+  border-top: 1px solid #dddddd;
+}
+.mfia-panel-default {
+  border-color: #dddddd;
+  background-color: #aebac2;
+  border: 1px solid #aebac2;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+}
+.mfia-panel-default > .panel-heading {
+  color: #333333;
+  background-color: #f5f5f5;
+  border-color: #dddddd;
+}
+.mfia-panel-default > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #dddddd;
+}
+.mfia-panel-default > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #dddddd;
+}
+.mfia-panel-default h2 {
+  color: #303a41;
+}
 body {
-  background-color: #a8c88e;
+  background-color: #8295a2;
 }
 .main-container {
   margin-top: 20px;
@@ -5996,7 +6047,7 @@ body {
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
-  background-color: #679146;
+  background-color: #5c6f7b;
   border-color: #151b1e;
 }
 .navbar-default .navbar-brand {
@@ -6104,7 +6155,7 @@ body {
 .off-canvas-navbar-default {
   display: table;
   vertical-align: middle;
-  background-color: #679146;
+  background-color: #5c6f7b;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
