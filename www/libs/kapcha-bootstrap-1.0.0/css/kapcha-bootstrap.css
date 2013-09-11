@@ -5943,11 +5943,6 @@ td.visible-print {
 .table-finance td {
   text-align: right;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .table-finance td {
-    font-size: 11px;
-  }
-}
 .main-container {
   margin-top: 20px;
 }
