@@ -5907,6 +5907,42 @@ td.visible-print {
   }
 }
 /*! kapcha bootstrap overrides for variables.less */
+.table-finance {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.table-finance thead > tr > th,
+.table-finance tbody > tr > th,
+.table-finance tfoot > tr > th,
+.table-finance thead > tr > td,
+.table-finance tbody > tr > td,
+.table-finance tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.table-finance thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.table-finance caption + thead tr:first-child th,
+.table-finance colgroup + thead tr:first-child th,
+.table-finance thead:first-child tr:first-child th,
+.table-finance caption + thead tr:first-child td,
+.table-finance colgroup + thead tr:first-child td,
+.table-finance thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-finance tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.table-finance .table {
+  background-color: #ffffff;
+}
+.table td {
+  text-align: right;
+}
 .main-container {
   margin-top: 20px;
 }

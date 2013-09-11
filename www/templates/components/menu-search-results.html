@@ -1,13 +1,9 @@
 <div class="k-menu-section">
-      <ul class="list-unstyled">
-          <li><a href="#" ng-click="switchMatter('0088888-0088888')">0088888-0088888</a></li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>0088888-0088888</li>
-          <li>{{name}}</li>
-      </ul>
+    <!--<div>{{subscribedMatters}}</div>-->
+        <ul class="list-group">
+               <li class="list-group-item" ng-repeat="matter in subscribedMatters | filter:query">
+                   <a href ng-click="switchMatter(matter.matterId)">{{matter.matterId}}</a>
+                   <a href >{{matter.matterName}}</a>
+               </li>
+        </ul>
 </div>

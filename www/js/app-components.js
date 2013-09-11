@@ -1,11 +1,3 @@
-/**
- * Created with JetBrains WebStorm.
- * User: furrm
- * Date: 28/08/2013
- * Time: 06:54
- * To change this template use File | Settings | File Templates.
- */
-
 'use strict';
 
 angular.module('app.components', [])
@@ -86,117 +78,18 @@ angular.module('app.components', [])
         return{
             restrict: 'E',
             templateUrl: 'templates/components/menu-search-results.html',
-            require: '^offCanvas',  // use the offCanvas controller
-            link: function (scope, element, attribute, offCanvasCtrl) {
-
-//                scope.switch = function (args) {
-//                    offCanvasCtrl.switchMatter(args);
-//                }
-
-            }
-
-        }
-    }).directive('panel', function () {
-        return{
-            restrict: 'E',
-            replace: 'true',
-            scope: true,
-            templateUrl: 'templates/components/panel.html',
-            require: '^offCanvas',
-            link: function (scope, element, attribute, appCtrl) {
-
-            },
             controller: '@',
             name: 'ctrl'
-        }
-    })
-    .controller('MatterInfoCtrl', function ($scope) {
-        $scope.panelName = 'Matter Info';
+//            require: '^offCanvas',  // use the offCanvas controller
+//            link: function (scope, element, attribute, offCanvasCtrl) {
+//
+////                scope.switch = function (args) {
+////                    offCanvasCtrl.switchMatter(args);
+////                }
 
-        $scope.buttonClicked = 'Click my button ;-)';
-
-        $scope.panelMenuClick = function (args) {
-            switch (args) {
-                case 'dataTable':
-                    $scope.buttonClicked = 'Data table clicked!!';
-                    break;
-                case 'chart':
-                    $scope.buttonClicked = 'Ok, Ill render a chart.';
-                    break;
-                case 'refresh':
-                    $scope.buttonClicked = 'Gonna refresh...';
-                    break;
-                default:
-                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
             }
 
-        }
-    })
-    .controller('MatterOverviewLifeToDateCtrl', function ($scope) {
-        $scope.panelName = 'Matter Overview Life To Date';
 
-        $scope.buttonClicked = 'Click my button ;-)';
-
-        $scope.panelMenuClick = function (args) {
-            switch (args) {
-                case 'dataTable':
-                    $scope.buttonClicked = 'Data table clicked!!';
-                    break;
-                case 'chart':
-                    $scope.buttonClicked = 'Ok, Ill render a chart.';
-                    break;
-                case 'refresh':
-                    $scope.buttonClicked = 'Gonna refresh...';
-                    break;
-                default:
-                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
-            }
-
-        }
-    })
-    .controller('WorkInProgressCtrl', function ($scope) {
-        $scope.panelName = 'Work In Progress';
-
-        $scope.buttonClicked = 'Click my button ;-)';
-
-        $scope.panelMenuClick = function (args) {
-            switch (args) {
-                case 'dataTable':
-                    $scope.buttonClicked = 'Data table clicked!!';
-                    break;
-                case 'chart':
-                    $scope.buttonClicked = 'Ok, Ill render a chart.';
-                    break;
-                case 'refresh':
-                    $scope.buttonClicked = 'Gonna refresh...';
-                    break;
-                default:
-                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
-            }
-
-        }
-    })
-    .controller('UnpaidInvoicesCtrl', function ($scope) {
-        $scope.panelName = 'Unpaid Invoices';
-
-        $scope.buttonClicked = 'Click my button ;-)';
-
-        $scope.panelMenuClick = function (args) {
-            switch (args) {
-                case 'dataTable':
-                    $scope.buttonClicked = 'Data table clicked!!';
-                    break;
-                case 'chart':
-                    $scope.buttonClicked = 'Ok, Ill render a chart.';
-                    break;
-                case 'refresh':
-                    $scope.buttonClicked = 'Gonna refresh...';
-                    break;
-                default:
-                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
-            }
-
-        }
     })
 
 ;

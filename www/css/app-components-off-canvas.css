@@ -44,8 +44,7 @@
 .k-menu-section {
   color: #faf9fd;
   margin-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   border-bottom: solid 1px #727272;
 }
 .k-menu-section-title {

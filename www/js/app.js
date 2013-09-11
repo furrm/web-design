@@ -1,4 +1,4 @@
-angular.module('app', ['app.finance.controllers', 'app.components'])
+angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance.components.panels', 'app.services'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/main', {
@@ -62,4 +62,9 @@ angular.module('app', ['app.finance.controllers', 'app.components'])
             $scope.selectedMatter = args;
         }
 
-    });
+
+    })
+//    .controller('CacheCtrl', function ($scope) {
+//
+//    })
+;

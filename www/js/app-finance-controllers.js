@@ -1,10 +1,114 @@
 'use strict';
 
 angular.module('app.finance.controllers', [])
-    .controller('TestCtrl', function($scope){
-        $scope.name = 'Test Controller';
+    .controller('MatterInfoCtrl', function ($scope) {
+        $scope.panelName = 'Matter Info';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
     })
-    .controller('MatterInfoCtrl', function($scope){
-        $scope.name = 'MatterInfoCtrl';
-//      ToDo: Call the finance service from here.
-    });
+    .controller('MatterOverviewLifeToDateCtrl', function ($scope, matterLifeToDateService) {
+
+        $scope.panelName = 'Matter Overview Life To Date';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
+
+        $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+    })
+    .controller('WorkInProgressCtrl', function ($scope) {
+        $scope.panelName = 'Work In Progress';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
+    })
+    .controller('UnpaidInvoicesCtrl', function ($scope) {
+        $scope.panelName = 'Unpaid Invoices';
+
+        $scope.buttonClicked = 'Click my button ;-)';
+
+        $scope.panelMenuClick = function (args) {
+            switch (args) {
+                case 'dataTable':
+                    $scope.buttonClicked = 'Data table clicked!!';
+                    break;
+                case 'chart':
+                    $scope.buttonClicked = 'Ok, Ill render a chart.';
+                    break;
+                case 'refresh':
+                    $scope.buttonClicked = 'Gonna refresh...';
+                    break;
+                default:
+                    $scope.buttonClicked = 'Not sure what was clicked, but the args = ' + args;
+            }
+
+        }
+    })
+    .controller('SubscribedMattersCtrl', function($scope, subscribedMatterService, cacheService){
+
+        var subscribedMatters = subscribedMatterService.items;
+
+        $scope.subscribedMatters = subscribedMatters;
+        cacheService.put('matters:subscribed:username', subscribedMatters);
+
+
+    })
+//    .controller('MatterOverviewLifeToDateCtrl', function($scope, matterLifeToDateService){
+//        $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+//    })
+    .controller('CacheCtrl', function($scope, cacheService){
+        $scope.getCacheInfo = function(){
+            return cacheService.info();
+        }
+
+
+    })
+;
