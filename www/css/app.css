@@ -98,10 +98,10 @@
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-html {
-  height: 100%;
-}
-body {
-  height: 100%;
-  width: 100%;
-}
+/*html {*/
+  /*height: 100%;*/
+/*}*/
+/*body {*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+/*}*/
