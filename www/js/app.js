@@ -15,18 +15,18 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         $scope.name = 'App Controller';
 
         // Menu specific classes
-        var menuOpenCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';
-//                var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open'; // force open for dev
-        var menuCloseCssClass = 'k-menu k-menu-vertical k-menu-left';
+        var menuOpenCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
+//                var menuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open'; // force open for dev
+        var menuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left';
 
         // main specific classes
-        var mainOpenCssClass = 'k-main-push k-main-push-toright';
-//                var mainCloseCssClass = 'k-main-push k-main-push-toright' // force open for dev
-        var mainCloseCssClass = 'k-main-push';
+        var mainOpenCssClass = 'main-push main-push-toright';
+//                var mainCloseCssClass = 'main-push main-push-toright' // force open for dev
+        var mainCloseCssClass = 'main-push';
 
         // mask specific classes
-        var maskActiveCssClass = "k-main-mask k-main-mask-menu-open";
-        var maskInactiveCssClass = "k-main-mask";
+        var maskActiveCssClass = "main-mask main-mask-menu-open";
+        var maskInactiveCssClass = "main-mask";
 
         var menuIsOpen = 0;
 

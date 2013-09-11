@@ -10,9 +10,9 @@ angular.module('app.components', [])
             templateUrl: 'templates/off-canvas-menu.html',
             link: function (scope, element, attrs, controller) {
 
-//                var inactiveCssClass = 'k-menu k-menu-vertical k-menu-left';
-                var inactiveCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';  // force open for dev
-                var activeCssClass = 'k-menu k-menu-vertical k-menu-left k-menu-open';
+//                var inactiveCssClass = 'slide-menu slide-menu-vertical slide-menu-left';
+                var inactiveCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';  // force open for dev
+                var activeCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
 
 
                 //set initial state.

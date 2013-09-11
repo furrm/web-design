@@ -16,42 +16,42 @@
 
 }
 
-.off-canvas-navbar{
-  height: 50px;
-  width: 100%;
-  padding: 10px;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.off-canvas-navbar-default{
-  display: table;
-  vertical-align: middle;
-//  text-align: center;
-  background-color: @off-canvas-nav-background;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.off-canvas-nav{
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  background-color: transparent;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.navbar-font-height{font-size: 40px;}
+//.off-canvas-navbar{
+//  height: 50px;
+//  width: 100%;
+//  padding: 10px;
+//
+//  -webkit-box-sizing: border-box;
+//  -moz-box-sizing: border-box;
+//  box-sizing: border-box;
+//}
+//
+//.off-canvas-navbar-default{
+//  display: table;
+//  vertical-align: middle;
+////  text-align: center;
+//  background-color: @off-canvas-nav-background;
+//  -webkit-box-sizing: border-box;
+//  -moz-box-sizing: border-box;
+//  box-sizing: border-box;
+//}
+//
+//.off-canvas-nav{
+//  display: table-cell;
+//  text-align: left;
+//  vertical-align: middle;
+//  background-color: transparent;
+//
+//  -webkit-box-sizing: border-box;
+//  -moz-box-sizing: border-box;
+//  box-sizing: border-box;
+//}
+//
+//.navbar-font-height{font-size: 40px;}
 
 /* General styles for all menus */
 
-.k-menu {
+.slide-menu {
   //background: #47a3da;
   position: fixed;
 }
@@ -60,14 +60,14 @@
 
 /* Orientation-dependent styles for the content of the menu */
 
-.k-menu-vertical {
+.slide-menu-vertical {
   width: @menuWidth;
   height: 100%;
   top: 0;
   z-index: 1000;
   background-color: @off-canvas-menu-background;
 }
-.k-menu-section{
+.slide-menu-section {
   color: #faf9fd;
   margin-top: 10px;
 //  padding-left: 10px;
@@ -76,30 +76,30 @@
   border-bottom: solid 1px @off-canvas-menu-section-title;
 }
 
-.k-menu-section-title{
+.slide-menu-section-title {
   color: @off-canvas-menu-section-title;
   text-transform: uppercase;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.k-menu-textbox{
+.slide-menu-textbox {
   width:80%;
 }
 
 /* Vertical menu that slides from the left or right */
 
-.k-menu-left {
+.slide-menu-left {
   left: -@menuWidth;
 }
 
-.k-menu-left.k-menu-open {
+.slide-menu-left.k-menu-open {
   left: 0px;
 }
 
 /* Push classes applied to the main div */
 
-.k-main-push {
+.main-push {
   overflow-x: hidden;
   position: relative;
   left: 0;
@@ -107,13 +107,13 @@
 
 }
 
-.k-main-push-toright {
+.main-push-toright {
   left: @menuWidth;
 
 
 }
 
-.k-main-mask{
+.main-mask {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -127,16 +127,16 @@
   filter: alpha(opacity=70);
 }
 
-.k-main-mask-menu-open{
+.main-mask-menu-open {
   visibility: visible;
   left: @menuWidth;
 }
 
 /* Transitions */
 
-.k-menu,
-.k-main-push,
-.k-main-mask{
+.slide-menu,
+.main-push,
+ {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;

@@ -105,4 +105,16 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
+    .directive('panelClickable', function(){
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-clickable.html',
+            scope:{
+//                Isolated scope.
+                  name:'@'
+            }
+
+        }
+    })
 ;

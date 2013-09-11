@@ -3,7 +3,7 @@
 angular.module('app', ['app.finance.controllers', 'app.components'])
     .controller('AppCtrl', function ($scope) {
         $scope.name = 'App Controller';
-//        $scope.bodyClass = "cbp-spmenu k-menu-vertical kr-menu-left";
+//        $scope.bodyClass = "cbp-spmenu slide-menu-vertical kr-menu-left";
         var body = document.querySelector('body');
         var menu = document.querySelector('#cbp-spmenu-s1');
 
@@ -12,11 +12,11 @@ angular.module('app', ['app.finance.controllers', 'app.components'])
         $scope.toggleMenu = function () {
             if (!$scope.menuState) {
                 angular.element(body).addClass('cbp-spmenu-push-toright');
-                angular.element(menu).addClass('k-menu-open');
+                angular.element(menu).addClass('slide-menu-open');
                 $scope.menuState = 1;
             } else {
                 angular.element(body).removeClass('cbp-spmenu-push-toright');
-                angular.element(menu).removeClass('k-menu-open');
+                angular.element(menu).removeClass('slide-menu-open');
                 $scope.menuState = 0;
             }
 

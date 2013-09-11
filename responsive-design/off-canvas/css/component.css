@@ -38,7 +38,7 @@
 	z-index: 1000;
 }
 
-/*.k-menu-vertical a {*/
+/*.slide-menu-vertical a {*/
 	/*border-bottom: 1px solid #258ecd;*/
 	/*padding: 1em;*/
 /*}*/
@@ -78,7 +78,7 @@
 	left: 0px;
 }
 
-/*.cbp-spmenu-right.k-menu-open {*/
+/*.cbp-spmenu-right.slide-menu-open {*/
 	/*right: 0px;*/
 /*}*/
 
@@ -92,11 +92,11 @@
 	/*bottom: -150px;*/
 /*}*/
 
-/*.cbp-spmenu-top.k-menu-open {*/
+/*.cbp-spmenu-top.slide-menu-open {*/
 	/*top: 0px;*/
 /*}*/
 
-/*.cbp-spmenu-bottom.k-menu-open {*/
+/*.cbp-spmenu-bottom.slide-menu-open {*/
 	/*bottom: 0px;*/
 /*}*/
 
@@ -149,7 +149,7 @@
 
 /*@media screen and (max-height: 26.375em){*/
 
-	/*.k-menu-vertical {*/
+	/*.slide-menu-vertical {*/
 		/*font-size: 90%;*/
 		/*width: 190px;*/
 	/*}*/

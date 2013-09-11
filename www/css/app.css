@@ -1,52 +1,51 @@
 .off-canvas-container {
   height: 100%;
 }
-
 /* General styles for all menus */
-.k-menu {
+.slide-menu {
   position: fixed;
 }
 /* Orientation-dependent styles for the content of the menu */
-.k-menu-vertical {
+.slide-menu-vertical {
   width: 300px;
   height: 100%;
   top: 0;
   z-index: 1000;
   background-color: #333333;
 }
-.k-menu-section {
+.slide-menu-section {
   color: #faf9fd;
   margin-top: 10px;
   padding: 10px;
   border-bottom: solid 1px #727272;
 }
-.k-menu-section-title {
+.slide-menu-section-title {
   color: #727272;
   text-transform: uppercase;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.k-menu-textbox {
+.slide-menu-textbox {
   width: 80%;
 }
 /* Vertical menu that slides from the left or right */
-.k-menu-left {
+.slide-menu-left {
   left: -300px;
 }
-.k-menu-left.k-menu-open {
+.slide-menu-left.k-menu-open {
   left: 0px;
 }
 /* Push classes applied to the main div */
-.k-main-push {
+.main-push {
   overflow-x: hidden;
   position: relative;
   left: 0;
   height: 100%;
 }
-.k-main-push-toright {
+.main-push-toright {
   left: 300px;
 }
-.k-main-mask {
+.main-mask {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -59,21 +58,20 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=70);
 }
-.k-main-mask-menu-open {
+.main-mask-menu-open {
   visibility: visible;
   left: 300px;
 }
 /* Transitions */
-.k-menu,
-.k-main-push,
-.k-main-mask {
+.slide-menu,
+.main-push {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/*html {*/
-  /*height: 100%;*/
-/*}*/
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   width: 100%;
