@@ -48,7 +48,7 @@ angular.module('app.finance.controllers', [])
 
         $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
     })
-    .controller('WorkInProgressCtrl', function ($scope) {
+    .controller('WorkInProgressCtrl', function ($scope, workInProgressService) {
         $scope.panelName = 'Work In Progress';
 
         $scope.buttonClicked = 'Click my button ;-)';
@@ -69,8 +69,11 @@ angular.module('app.finance.controllers', [])
             }
 
         }
+
+        $scope.workInProgress = workInProgressService.workInProgress;
     })
-    .controller('UnpaidInvoicesCtrl', function ($scope) {
+    .controller('UnpaidInvoicesCtrl', function ($scope, unpaidInvoiceService) {
+
         $scope.panelName = 'Unpaid Invoices';
 
         $scope.buttonClicked = 'Click my button ;-)';
@@ -91,6 +94,8 @@ angular.module('app.finance.controllers', [])
             }
 
         }
+
+        $scope.unpaidInvoices = unpaidInvoiceService.unpaidInvoices;
     })
     .controller('SubscribedMattersCtrl', function($scope, subscribedMatterService, cacheService){
 
@@ -101,9 +106,6 @@ angular.module('app.finance.controllers', [])
 
 
     })
-//    .controller('MatterOverviewLifeToDateCtrl', function($scope, matterLifeToDateService){
-//        $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
-//    })
     .controller('CacheCtrl', function($scope, cacheService){
         $scope.getCacheInfo = function(){
             return cacheService.info();

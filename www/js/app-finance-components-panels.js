@@ -29,6 +29,34 @@ angular.module('app.finance.components.panels', [])
             name: 'ctrl'
         }
     })
+    .directive('panelWorkinprogress', function () {
+        return{
+            restrict: 'E',
+            replace: 'true',
+            scope: true,
+            templateUrl: 'templates/components/panel/panel-workinprogress.html',
+            require: '^offCanvas',
+            link: function (scope, element, attribute, appCtrl) {
+
+            },
+            controller: '@',
+            name: 'ctrl'
+        }
+    })
+    .directive('panelUnpaidinvoice', function () {
+        return{
+            restrict: 'E',
+            replace: 'true',
+            scope: true,
+            templateUrl: 'templates/components/panel/panel-unpaidinvoices.html',
+            require: '^offCanvas',
+            link: function (scope, element, attribute, appCtrl) {
+
+            },
+            controller: '@',
+            name: 'ctrl'
+        }
+    })
     .directive('panelHeader', function(){
         return{
             restrict: 'E',
@@ -50,6 +78,22 @@ angular.module('app.finance.components.panels', [])
             restrict: 'E',
             replace: true,
             templateUrl: 'templates/components/panel/panel-body-matterlifetodate.html'
+
+        }
+    })
+    .directive('panelBodyWorkinprogress', function(){
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-body-workinprogress.html'
+
+        }
+    })
+    .directive('panelBodyUnpaidinvoices', function(){
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-body-unpaidinvoices.html'
 
         }
     })
