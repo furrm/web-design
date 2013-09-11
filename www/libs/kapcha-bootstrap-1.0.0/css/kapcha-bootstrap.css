@@ -5906,6 +5906,11 @@ td.visible-print {
     display: none !important;
   }
 }
+/* Brand Colours */
+/* Monochrome */
+/* Spot Highlights */
+/* Strong Neutrals */
+/* Light Neutrals */
 /*! kapcha bootstrap overrides for variables.less */
 .table-finance {
   width: 100%;
@@ -5943,6 +5948,9 @@ td.visible-print {
 .table-finance td {
   text-align: right;
 }
+body {
+  background-color: #a8c88e;
+}
 .main-container {
   margin-top: 20px;
 }
@@ -5954,7 +5962,6 @@ td.visible-print {
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 0px;
-  background-color: #2c2c2e;
   height: 50px;
 }
 .navbar:before,
@@ -5989,7 +5996,7 @@ td.visible-print {
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
-  background-color: #2c2c2e;
+  background-color: #679146;
   border-color: #151b1e;
 }
 .navbar-default .navbar-brand {
@@ -6085,6 +6092,34 @@ td.visible-print {
 }
 .navbar-default .navbar-link:hover {
   color: #333333;
+}
+.off-canvas-navbar {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.off-canvas-navbar-default {
+  display: table;
+  vertical-align: middle;
+  background-color: #679146;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.off-canvas-nav {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.navbar-font-height {
+  font-size: 40px;
 }
 @media (min-width: 768px) {
   .navbar {

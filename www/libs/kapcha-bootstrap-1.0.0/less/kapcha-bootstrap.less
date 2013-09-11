@@ -65,6 +65,10 @@
 @import "menu-side.less";
 @import "panel.less";
 
+body{
+  background-color: @base-lighten1;
+}
+
 .main-container{
   margin-top: 20px;
 }
@@ -74,15 +78,45 @@
 .navbar{
   .navbar;
   border-radius: 0px;
-  background-color: @black2;
+//  background-color: @black2;
+//  background-color: @base;
   height: 50px;
 }
 
 .navbar-default {
   .navbar-default;
-  background-color: @black2;
+  background-color: @base;
   border-color: @black1;
 
+}
+
+.off-canvas-navbar {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.off-canvas-navbar-default {
+  display: table;
+  vertical-align: middle;
+  background-color: @base;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.off-canvas-nav {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.navbar-font-height {
+  font-size: 40px;
 }
 
 @media (min-width: 768px) {
