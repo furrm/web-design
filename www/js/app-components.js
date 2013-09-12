@@ -52,16 +52,27 @@ angular.module('app.components', [])
             replace: true
         }
     })
-    .directive('menuHeader', function () {
-        return{
-            restrict: 'E',
-            templateUrl: 'templates/components/menu-header.html'
-        }
-    })
     .directive('menuSide', function () {
         return{
             restrict: 'E',
-            templateUrl: 'templates/components/menu-side.html'
+            templateUrl: 'templates/components/menu/menu-side.html'
+//            controller:function(){
+//                this.doSomething = function(){
+//                    alert('Doing Something =)');
+//                };
+//            }
+        }
+    })
+    .directive('menuHeader', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu/menu-header.html'
+        }
+    })
+    .directive('menuTop', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'templates/components/menu/menu-top.html'
 //            controller:function(){
 //                this.doSomething = function(){
 //                    alert('Doing Something =)');
@@ -72,12 +83,12 @@ angular.module('app.components', [])
     .directive('menuSearch',function () {
         return{
             restrict: 'E',
-            templateUrl: 'templates/components/menu-search.html'
+            templateUrl: 'templates/components/menu/menu-search.html'
         }
     }).directive('menuSearchResults',function () {
         return{
             restrict: 'E',
-            templateUrl: 'templates/components/menu-search-results.html',
+            templateUrl: 'templates/components/menu/menu-search-results.html',
             controller: '@',
             name: 'ctrl'
 //            require: '^offCanvas',  // use the offCanvas controller

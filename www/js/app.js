@@ -15,9 +15,10 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         $scope.name = 'App Controller';
 
         // Menu specific classes
-        var menuOpenCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
-//                var menuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open'; // force open for dev
-        var menuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left';
+        var sideMenuOpenCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
+        var sideMenuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left';
+        var topMenuOpenCssClass = 'slide-menu slide-menu-horizontal slide-menu-top slide-menu-open';
+        var topMenuClosedCssClass = 'slide-menu slide-menu-horizontal slide-menu-top';
 
         // main specific classes
         var mainOpenCssClass = 'main-push main-push-toright';
@@ -28,30 +29,56 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         var maskActiveCssClass = "main-mask main-mask-menu-open";
         var maskInactiveCssClass = "main-mask";
 
-        var menuIsOpen = 0;
+        var sideMenuIsOpen = 0;
 
-        $scope.menuCss = menuCloseCssClass;
+
+        $scope.sideMenuCss = sideMenuCloseCssClass;
         $scope.mainCss = mainCloseCssClass;
         $scope.maskCss = maskInactiveCssClass;
 
-        $scope.toggleMenuState = function () {
+        $scope.toggleSideMenuState = function () {
 
-            if (menuIsOpen) // then close it...
+            if (sideMenuIsOpen) // then close it...
             {
 //                       alert('Close the menu...');
-                $scope.menuCss = menuCloseCssClass;
+                $scope.sideMenuCss = sideMenuCloseCssClass;
                 $scope.mainCss = mainCloseCssClass;
                 $scope.maskCss = maskInactiveCssClass
             } else // then open it
             {
 //                        alert('Open the menu...');
-                $scope.menuCss = menuOpenCssClass;
+                $scope.sideMenuCss = sideMenuOpenCssClass;
                 $scope.mainCss = mainOpenCssClass;
                 $scope.maskCss = maskActiveCssClass
 
             }
 
-            menuIsOpen = !menuIsOpen;
+            sideMenuIsOpen = !sideMenuIsOpen;
+
+        }
+
+        var topMenuIsOpen = 0;
+
+        $scope.topMenuCss = topMenuClosedCssClass;
+
+        $scope.toggleTopMenuState = function () {
+
+            if (topMenuIsOpen) // then close it...
+            {
+//                       alert('Close the menu...');
+                $scope.topMenuCss = topMenuClosedCssClass;
+//                $scope.mainCss = mainCloseCssClass;
+//                $scope.maskCss = maskInactiveCssClass
+            } else // then open it
+            {
+//                        alert('Open the menu...');
+                $scope.topMenuCss = topMenuOpenCssClass;
+//                $scope.mainCss = mainOpenCssClass;
+//                $scope.maskCss = maskActiveCssClass
+
+            }
+
+            topMenuIsOpen = !topMenuIsOpen;
 
         }
 
