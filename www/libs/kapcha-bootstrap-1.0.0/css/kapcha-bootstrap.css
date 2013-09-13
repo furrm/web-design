@@ -5932,7 +5932,7 @@ td.visible-print {
   height: 100%;
   left: 0;
   z-index: 1000;
-  background-color: #5c6f7b;
+  background-color: #939598;
 }
 /* Menu Sections */
 .slide-menu-section-header {
@@ -5941,7 +5941,7 @@ td.visible-print {
   font-size: 20px;
   text-align: center;
   padding: 10px;
-  border-bottom: solid 1px #5c6f7b;
+  border-bottom: solid 1px #939598;
 }
 /* Centering */
 .block {
@@ -5974,7 +5974,7 @@ td.visible-print {
 .slide-menu-section {
   margin-top: 10px;
   padding: 10px;
-  border-bottom: solid 1px #5c6f7b;
+  border-bottom: solid 1px #939598;
 }
 .slide-menu-section-title {
   color: #939598;
@@ -6036,12 +6036,11 @@ td.visible-print {
 }
 .subscribed-matter {
   height: 100px;
-  border-bottom: solid 1px #c7c8ca;
   padding: 10px;
   cursor: hand;
 }
 .subscribed-matter a {
-  color: #303a41;
+  color: #606265;
   text-decoration: none;
 }
 .menu-panel-heading {
@@ -6096,7 +6095,7 @@ td.visible-print {
 }
 .clickable-panel-wrapper a:hover {
   text-decoration: none;
-  color: #5c6f7b;
+  color: #939598;
 }
 .clickable-panel {
   margin-bottom: 20px;
@@ -6128,8 +6127,8 @@ td.visible-print {
 }
 .clickable-panel-default {
   border-color: #dddddd;
-  background-color: #e8ecee;
-  border: 1px solid #e8ecee;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
 }
@@ -6150,19 +6149,19 @@ td.visible-print {
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  background-color: #e8ecee;
+  background-color: #ffffff;
   border-top: 0px solid #dddddd;
 }
 .clickable-panel-default h2 {
-  color: #5c6f7b;
+  color: #606265;
 }
 .report {
   width: 100%;
   height: 100%;
-  background-color: #5c6f7b;
+  background-color: #939598;
 }
 body {
-  background-color: #8295a2;
+  background-color: #babbbd;
 }
 .main-container {
   margin-top: 20px;
@@ -6209,7 +6208,7 @@ body {
 .navbar-default {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
-  background-color: #5c6f7b;
+  background-color: #939598;
   border-color: #151b1e;
 }
 .navbar-default .navbar-brand {
@@ -6317,7 +6316,7 @@ body {
 .off-canvas-navbar-default {
   display: table;
   vertical-align: middle;
-  background-color: #5c6f7b;
+  background-color: #939598;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -6342,7 +6341,7 @@ body {
   line-height: 2.1428571435;
   color: inherit;
   background-color: #eeeeee;
-  background-color: #e8ecee;
+  background-color: #ffffff;
 }
 .jumbotron h1 {
   line-height: 1;
@@ -6368,7 +6367,7 @@ body {
   }
 }
 .jumbotron h1 {
-  color: #303a41;
+  color: #606265;
 }
 a {
   color: white;
