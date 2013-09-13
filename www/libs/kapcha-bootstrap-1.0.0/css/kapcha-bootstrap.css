@@ -5914,6 +5914,12 @@ td.visible-print {
 /*! kapcha bootstrap overrides for variables.less */
 .off-canvas-container {
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.st-container {
+  position: relative;
+  overflow: hidden;
 }
 /* General styles for all menus */
 .slide-menu {
