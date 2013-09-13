@@ -1,5 +1,14 @@
 <nav ng-class="sideMenuCss">
-    <menu-search></menu-search>
-    <menu-search-results ctrl='SubscribedMattersCtrl'>
-    </menu-search-results>
+    <!--<menu-header></menu-header>-->
+    <!--<menu-search></menu-search>-->
+    <!--<menu-search-results ctrl='SubscribedMattersCtrl'>-->
+    <!--</menu-search-results>-->
+
+    <div class="panel panel-default">
+        <div class="panel-heading menu-panel-heading">Subscribed Matters</div>
+        <div class="panel-body" style="height:500px; overflow: auto; padding:0px;">
+            <menu-search-results ctrl='SubscribedMattersCtrl'></menu-search-results>
+        </div>
+        <div class="panel-footer">this is the footer</div>
+    </div>
 </nav>

@@ -2,12 +2,19 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/main', {
-//                controller: 'MainCtrl',
                 templateUrl: 'templates/content/main.html'
             })
             .when('/css', {
-//                controller: 'ViewCtrl',
                 templateUrl: 'templates/content/css.html'
+            })
+            .when('/matter-overview-life-to-date', {
+                templateUrl: 'templates/content/matter-overview-life-to-date.html'
+            })
+            .when('/work-in-progress', {
+                templateUrl: 'templates/content/work-in-progress.html'
+            })
+            .when('/unpaid-invoices', {
+                templateUrl: 'templates/content/unpaid-invoices.html'
             })
             .otherwise({redirectTo: '/main'});
     }])

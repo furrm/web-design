@@ -107,21 +107,21 @@ angular.module('app.finance.components.panels', [])
     })
     .directive('panelClickable', function(){
         return{
-            scope:true,
+//            scope:true,
             restrict: 'E',
             replace: true,
             templateUrl: 'templates/components/panel/panel-clickable.html',
             require:'^offCanvas',
-            link:function($scope, $element, $attrs, $controller)
-            {
-                $scope.panelName = $attrs.name;
-                console.write($attrs);
-            }
-
-//            scope:{
-////                Isolated scope.
-//                  name:'@'
+//            link:function($scope, $element, $attrs, $controller)
+//            {
+//                $scope.panelName = $attrs.name;
+//                console.write($attrs);
 //            }
+            scope:{
+//                Isolated scope.
+                  name:'@',
+                  href: '@'
+            }
 
         }
     })

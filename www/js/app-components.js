@@ -71,8 +71,11 @@ angular.module('app.components', [])
     })
     .directive('menuTop', function () {
         return{
+            scope:true,
             restrict: 'E',
-            templateUrl: 'templates/components/menu/menu-top.html'
+            templateUrl: 'templates/components/menu/menu-top.html',
+            require:'^offCanvas'
+
 //            controller:function(){
 //                this.doSomething = function(){
 //                    alert('Doing Something =)');
