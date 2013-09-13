@@ -9,7 +9,8 @@
 @off-canvas-menu-background:#333;
 @off-canvas-menu-section-title:#727272;
 
-
+@menu-panel-body-height: 70%;
+@menu-panel-footer-height: 50px;
 //@side-menu-background:#1B1E1F;
 
 .off-canvas-container{
@@ -19,10 +20,16 @@
   overflow: hidden;
 }
 
+.menu-panel-body{
+  .panel-body;
+   height:   @menu-panel-body-height;
+  overflow: auto;
+  padding:0px;
+}
 
-.st-container {
-  position: relative;
-  overflow: hidden;
+.menu-panel-footer{
+  .panel-footer;
+  height:@menu-panel-footer-height;
 }
 
 //.off-canvas-navbar{
