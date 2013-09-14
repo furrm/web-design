@@ -46,7 +46,7 @@ angular.module('app.finance.controllers', [])
 
         }
 
-        $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+//        $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
     })
     .controller('WorkInProgressCtrl', function ($scope, workInProgressService) {
         $scope.panelName = 'Work In Progress';

@@ -13,17 +13,13 @@
 @menu-panel-footer-height: 50px;
 //@side-menu-background:#1B1E1F;
 
-.off-canvas-container{
-  //  background-color: green;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
+
 
 .menu-panel-body{
   .panel-body;
    height:   @menu-panel-body-height;
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   padding:0px;
 }
 

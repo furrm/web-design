@@ -15,7 +15,7 @@ angular.module('app.finance.components.panels', [])
             name: 'ctrl'
         }
     })
-    .directive('panelMatterlifetodate', function () {
+    .directive('panelMatterlifetodate', function(matterLifeToDateService) {
         return{
             restrict: 'E',
             replace: 'true',
@@ -23,6 +23,14 @@ angular.module('app.finance.components.panels', [])
             templateUrl: 'templates/components/panel/panel-matterlifetodate.html',
             require: '^offCanvas',
             link: function (scope, element, attribute, appCtrl) {
+
+                // Watch for a change in the scope to selectedMatter.
+                // If it changes, go and get the data
+                scope.$watch('selectedMatter', function () {
+                        alert('Changed');
+                        scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+                    }
+                )
 
             },
             controller: '@',
@@ -57,7 +65,7 @@ angular.module('app.finance.components.panels', [])
             name: 'ctrl'
         }
     })
-    .directive('panelHeader', function(){
+    .directive('panelHeader', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -65,7 +73,7 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelBodyTemp', function(){
+    .directive('panelBodyTemp', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -73,7 +81,7 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelBodyMatterlifetodate', function(){
+    .directive('panelBodyMatterlifetodate', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -81,7 +89,7 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelBodyWorkinprogress', function(){
+    .directive('panelBodyWorkinprogress', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -89,7 +97,7 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelBodyUnpaidinvoices', function(){
+    .directive('panelBodyUnpaidinvoices', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -97,7 +105,7 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelFooter', function(){
+    .directive('panelFooter', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -105,22 +113,22 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
-    .directive('panelClickable', function(){
+    .directive('panelClickable', function () {
         return{
 //            scope:true,
             restrict: 'E',
             replace: true,
             templateUrl: 'templates/components/panel/panel-clickable.html',
-            require:'^offCanvas',
+            require: '^offCanvas',
 //            link:function($scope, $element, $attrs, $controller)
 //            {
 //                $scope.panelName = $attrs.name;
 //                console.write($attrs);
 //            }
-            scope:{
+            scope: {
 //                Isolated scope.
-                  name:'@',
-                  href: '@'
+                name: '@',
+                href: '@'
             }
 
         }

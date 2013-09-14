@@ -5912,15 +5912,11 @@ td.visible-print {
 /* Strong Neutrals */
 /* Light Neutrals */
 /*! kapcha bootstrap overrides for variables.less */
-.off-canvas-container {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
 .menu-panel-body {
   padding: 15px;
   height: 70%;
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 0px;
 }
 .menu-panel-body:before,
@@ -6344,6 +6340,11 @@ body {
 }
 .navbar-default .navbar-link:hover {
   color: #333333;
+}
+.off-canvas-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .off-canvas-navbar {
   height: 50px;

@@ -24,6 +24,8 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         // Menu specific classes
         var sideMenuOpenCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
         var sideMenuCloseCssClass = 'slide-menu slide-menu-vertical slide-menu-left';
+
+
         var topMenuOpenCssClass = 'slide-menu slide-menu-horizontal slide-menu-top slide-menu-open';
         var topMenuClosedCssClass = 'slide-menu slide-menu-horizontal slide-menu-top';
 
@@ -42,6 +44,7 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         $scope.sideMenuCss = sideMenuCloseCssClass;
         $scope.mainCss = mainCloseCssClass;
         $scope.maskCss = maskInactiveCssClass;
+
 
         $scope.toggleSideMenuState = function () {
 
