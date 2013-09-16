@@ -1,8 +1,11 @@
-<div class="panel panel-default" style="height:100%; background-color: green;">
-    <panel-header></panel-header>
-    <panel-body-matterlifetodate ng-hide="true" style="background-color: red;"></panel-body-matterlifetodate>
-    <div ng-show="true" class="fill-parent center-parent">
-        <div class="center-child"><i class="icon-spinner icon-spin"></i></div>
-    </div>
-    <panel-footer ng-disabled="true" class="panel-footer-report"></panel-footer>
+<div class="panel-report panel-default-report">
+    <panel-header class="panel-heading-report"></panel-header>
+    <!-- start:data table -->
+    <panel-body-matterlifetodate ng-show="haveMatterOverviewLifeToDate"></panel-body-matterlifetodate>
+    <!-- end:data table -->
+
+    <!-- start:spinner -->
+    <panel-spinner ng-show="downloadingData"></panel-spinner>
+    <!-- end:spinner -->
+    <panel-footer class="panel-footer-report"></panel-footer>
 </div>

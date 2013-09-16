@@ -1,4 +1,4 @@
-angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance.components.panels', 'app.services'])
+angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance.components.panels', 'app.finance.components.charts', 'app.services'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/main', {
@@ -6,6 +6,9 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             })
             .when('/css', {
                 templateUrl: 'templates/content/css.html'
+            })
+            .when('/chart', {
+                templateUrl: 'templates/content/chart.html'
             })
             .when('/matter-overview-life-to-date', {
                 templateUrl: 'templates/content/matter-overview-life-to-date.html'
@@ -18,7 +21,7 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             })
             .otherwise({redirectTo: '/main'});
     }])
-    .controller('AppCtrl', function ($scope) {
+    .controller('AppCtrl', function ($scope, $timeout, matterLifeToDateService) {
         $scope.name = 'App Controller';
 
         // Menu specific classes
@@ -94,13 +97,34 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
 
         var selectedMatterId = 'Nothing Selected!!';
 
+        $scope.downloadingData = false;
+        $scope.haveMatterOverviewLifeToDate = 0;
+        $scope.haveWorkInProgress = false;
+        $scope.haveUnpaidInvoices = false;
+
         $scope.switchMatter = function (args) {
-//                    alert(args);
+//
             $scope.selectedMatter = args;
+
+            $scope.downloadingData = true;
+            $scope.haveMatterOverviewLifeToDate = 0;
+            $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+
+
+            console.log('Getting Data...');
+
+            var timer = $timeout(function(){
+
+                $scope.downloadingData = false;
+                $scope.haveMatterOverviewLifeToDate = 1;
+
+
+            }, 3000);
+
         }
 
-         $scope.isError = 0;
-         $scope.haveData = 0;
-        $scope.gettingData = 1;
+
+          $scope.loginData = true;
+
     })
 ;

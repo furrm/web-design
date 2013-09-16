@@ -1,5 +1,5 @@
 <div class="">
-    <div class="panel" ng-repeat="matter in subscribedMatters | filter:query">
+    <div class="subscribed-matter-panel" ng-repeat="matter in subscribedMatters | filter:query">
         <div class="panel-body">
             <!--<div class="subscribed-matter">-->
                 <!--<a href ng-click="switchMatter(matter.matterId)">{{matter.matterId}}</a> <br>-->
@@ -8,9 +8,9 @@
                 <span>{{matter.matterName}}</span>
             <!--</div>-->
         </div>
-        <div class="panel-footer">
+        <div class="subscribed-matter-panel-footer" style="background-color: white;">
             <div>
-            <a href ng-click="switchMatter(matter.matterId)" class="btn btn-default"><i class="icon-download-alt"></i></a>
+            <a href ng-click="switchMatter(matter.matterId)" class="btn btn-default btn-success"><i class="icon-download-alt"></i>&nbsp;Download</a>
             </div>
         </div>
         <!--<a href ng-click="switchMatter(matter.matterId)">{{matter.matterId}}</a>  <br>-->

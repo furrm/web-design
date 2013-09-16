@@ -15,7 +15,7 @@ angular.module('app.finance.components.panels', [])
             name: 'ctrl'
         }
     })
-    .directive('panelMatterlifetodate', function(matterLifeToDateService) {
+    .directive('panelMatterlifetodate', function(matterLifeToDateService, $timeout) {
         return{
             restrict: 'E',
             replace: 'true',
@@ -24,13 +24,42 @@ angular.module('app.finance.components.panels', [])
             require: '^offCanvas',
             link: function (scope, element, attribute, appCtrl) {
 
-                // Watch for a change in the scope to selectedMatter.
-                // If it changes, go and get the data
-                scope.$watch('selectedMatter', function () {
-                        alert('Changed');
-                        scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
-                    }
-                )
+//                scope.haveData = 0;  // Show a message saying select matter...
+//                scope.gettingData = 0;  // turns the spinner on and off...
+//                scope.isError = 0 // turn error message on or off...
+//
+//
+//
+//
+//                // Watch for a change in the scope to selectedMatter.
+//                // If it changes, go and get the data
+//                scope.$watch('selectedMatter', function (newVal, oldVal) {
+//                        console.log('newVal = ' + newVal);
+//                        console.log('oldVal = ' + oldVal);
+//                      if(newVal === undefined)
+//                      {
+//                          scope.haveData = 0;
+//                          scope.gettingData = 0;
+//                      }
+//                        if(newVal !== oldVal){
+//                        console.log("Selected Matter Changed...");
+//                            scope.gettingData = 1;
+//                            scope.haveData = 0;
+//
+//                        var timer = $timeout(function(){
+//                            console.log('Getting Data...');
+//
+//                            scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+//
+//                            //got the data
+//                            scope.gettingData = 0;
+//                            scope.haveData = 1;
+//
+//
+//                        }, 3000);
+//                      }
+//                    }
+//                )
 
             },
             controller: '@',
@@ -110,6 +139,14 @@ angular.module('app.finance.components.panels', [])
             restrict: 'E',
             replace: true,
             templateUrl: 'templates/components/panel/panel-footer.html'
+
+        }
+    })
+    .directive('panelSpinner', function () {
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-spinner.html'
 
         }
     })
