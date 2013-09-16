@@ -21,7 +21,7 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             })
             .otherwise({redirectTo: '/main'});
     }])
-    .controller('AppCtrl', function ($scope, $timeout, matterLifeToDateService) {
+    .controller('AppCtrl', function ($scope, $timeout, matterLifeToDateService, workInProgressService, unpaidInvoiceService) {
         $scope.name = 'App Controller';
 
         // Menu specific classes
@@ -95,29 +95,87 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
 
         }
 
-        var selectedMatterId = 'Nothing Selected!!';
+        $scope.matterNotSelected = 1;
+
 
         $scope.downloadingData = false;
         $scope.haveMatterOverviewLifeToDate = 0;
         $scope.haveWorkInProgress = false;
         $scope.haveUnpaidInvoices = false;
 
+
+        // DATA STATUS
+        // 1 - Matter not selected...
+        // 2 - Matter selected and getting data...
+        // 3 - Success...
+        // 4 - Failure...
+
+        $scope.matterInfoStatus = 1;
+        $scope.matterOverviewLifeToDateStatus = 1;
+        $scope.workInProgressStatus = 1;
+        $scope.unpaidInvoicesStatus = 1;
+
         $scope.switchMatter = function (args) {
 //
+            // When switching over to a new matter, close the sliding menu...
+            // Ok, the behaviour is different to the iOS app, but this could prevent a DoS attack on the services =)
+//            $scope.sideMenuCss = sideMenuCloseCssClass;
+//            $scope.mainCss = mainCloseCssClass;
+//            $scope.maskCss = maskInactiveCssClass;
+            this.toggleSideMenuState();
+
             $scope.selectedMatter = args;
 
+
+
+
+            $scope.matterNotSelected = !$scope.matterNotSelected
+
             $scope.downloadingData = true;
+
+
             $scope.haveMatterOverviewLifeToDate = 0;
+
+            $scope.matterInfoStatus = 2;
+            $scope.matterOverviewLifeToDateStatus = 2;
+            $scope.workInProgressStatus = 2;
+            $scope.unpaidInvoicesStatus = 2;
+
+            // Make the calls to the service...
+            //TODO: MatterInfo
             $scope.matterLifeToDate = matterLifeToDateService.matterLifeToDate;
+            $scope.workInProgress = workInProgressService.workInProgress;
+            $scope.unpaidInvoices = unpaidInvoiceService.unpaidInvoices;
 
 
             console.log('Getting Data...');
+            $timeout(function(){
 
-            var timer = $timeout(function(){
+                $scope.matterInfoStatus = 3
+
+
+
+            }, 1000);
+
+            $timeout(function(){
 
                 $scope.downloadingData = false;
                 $scope.haveMatterOverviewLifeToDate = 1;
+                $scope.matterOverviewLifeToDateStatus = 3
 
+
+
+            }, 5000);
+
+            $timeout(function(){
+
+                $scope.workInProgressStatus = 3
+
+            }, 4000);
+
+            $timeout(function(){
+
+                $scope.unpaidInvoicesStatus = 3
 
             }, 3000);
 

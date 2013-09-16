@@ -152,7 +152,6 @@ angular.module('app.finance.components.panels', [])
     })
     .directive('panelClickable', function () {
         return{
-//            scope:true,
             restrict: 'E',
             replace: true,
             templateUrl: 'templates/components/panel/panel-clickable.html',
@@ -166,6 +165,25 @@ angular.module('app.finance.components.panels', [])
 //                Isolated scope.
                 name: '@',
                 href: '@'
+            }
+
+        }
+    }).directive('panelButton', function () {
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-button.html',
+            require: '^offCanvas',
+//            link:function($scope, $element, $attrs, $controller)
+//            {
+//                $scope.panelName = $attrs.name;
+//                console.write($attrs);
+//            }
+            scope: {
+//                Isolated scope.
+                name: '@',
+                status: '@',
+                link: '@'
             }
 
         }

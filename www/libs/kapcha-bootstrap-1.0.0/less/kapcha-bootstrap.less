@@ -79,6 +79,11 @@
 
 .fill-parent{height:100%; width:100%;}
 
+.push-to-bottom-of-parent{
+  position: relative;
+  bottom: 0;
+}
+
 //.center {
 //  width: 300px;
 ////  height: 100px;
@@ -219,7 +224,37 @@ a:focus {
   }
 }
 
+.btn-select-report{
+  .btn;
+  font-size: 30px;
+  overflow:auto;
+  white-space: inherit;
+}
 
+.btn-select-report-default{
+  color: @base-darken1;
+  background-color: @base-lighten3;
+  border-color: transparent;
+}
+
+.report-status-wrapper{
+  height: 100%;
+  width: 100%;
+  display: table;
+  margin-bottom: 10px;
+}
+
+.report-status{
+  display: table-cell;
+  font-size: 80px;
+  vertical-align: middle;
+}
+
+.selected-matter-jumbotron{
+  .jumbotron;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 /*! kapcha end:off-canvas */
 
 /*! kapcha start:navbar-menu-side */

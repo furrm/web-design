@@ -70,7 +70,7 @@ angular.module('app.finance.controllers', [])
 
         }
 
-        $scope.workInProgress = workInProgressService.workInProgress;
+//        $scope.workInProgress = workInProgressService.workInProgress;
     })
     .controller('UnpaidInvoicesCtrl', function ($scope, unpaidInvoiceService) {
 
@@ -95,7 +95,8 @@ angular.module('app.finance.controllers', [])
 
         }
 
-        $scope.unpaidInvoices = unpaidInvoiceService.unpaidInvoices;
+//        $scope.unpaidInvoices = unpaidInvoiceService.unpaidInvoices;
+
     })
     .controller('SubscribedMattersCtrl', function($scope, subscribedMatterService, cacheService){
 
