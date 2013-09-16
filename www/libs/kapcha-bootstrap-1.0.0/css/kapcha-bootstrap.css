@@ -5916,7 +5916,6 @@ td.visible-print {
   padding: 15px;
   height: 70%;
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
   padding: 0px;
 }
 .menu-panel-body:before,
@@ -6042,7 +6041,6 @@ td.visible-print {
 }
 /* Push classes applied to the main div */
 .main-push {
-  overflow-x: hidden;
   position: relative;
   left: 0;
   height: 100%;
@@ -6191,18 +6189,61 @@ td.visible-print {
 .clickable-panel-default h2 {
   color: #606265;
 }
+.panel-footer-report {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+}
 .report {
   width: 100%;
   height: 100%;
   background-color: #939598;
 }
+.fill-parent {
+  height: 100%;
+  width: 100%;
+}
+.center-parent {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  overflow: visible;
+  visibility: visible;
+  display: block;
+}
+.center-child {
+  margin-left: -125px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 250px;
+  height: 100px;
+  visibility: visible;
+  font-size: 120px;
+}
+html,
 body {
   background-color: #babbbd;
+  height: 100%;
 }
 .main-container {
   margin-top: 20px;
 }
 /*! kapcha start:navbar */
+.view-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+}
 .navbar {
   position: relative;
   z-index: 1000;

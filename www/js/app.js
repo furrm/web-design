@@ -99,9 +99,8 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             $scope.selectedMatter = args;
         }
 
-
+         $scope.isError = 0;
+         $scope.haveData = 0;
+        $scope.gettingData = 1;
     })
-//    .controller('CacheCtrl', function ($scope) {
-//
-//    })
 ;
