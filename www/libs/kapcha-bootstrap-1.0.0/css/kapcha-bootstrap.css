@@ -5917,6 +5917,7 @@ td.visible-print {
   height: 70%;
   overflow: scroll;
   padding: 0px;
+  -webkit-overflow-scrolling: touch;
 }
 .menu-panel-body:before,
 .menu-panel-body:after {
