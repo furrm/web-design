@@ -6344,6 +6344,7 @@ fieldset[disabled] .menu-activate-btn-default.active {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-radius: 0px;
+  margin-bottom: 0px;
 }
 .panel-report > .list-group {
   margin-bottom: 0;
@@ -6366,8 +6367,6 @@ fieldset[disabled] .menu-activate-btn-default.active {
 }
 .panel-default-report {
   height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 .panel-heading-report {
   border-top-right-radius: 3px;
@@ -6385,8 +6384,6 @@ fieldset[disabled] .menu-activate-btn-default.active {
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #e8ecee;
   border-top: 0px;
@@ -6610,7 +6607,6 @@ body {
 .off-canvas-container {
   height: 100%;
   position: relative;
-  overflow: hidden;
 }
 .off-canvas-navbar {
   height: 50px;
