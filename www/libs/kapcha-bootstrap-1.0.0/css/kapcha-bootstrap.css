@@ -6607,6 +6607,8 @@ body {
 .off-canvas-container {
   height: 100%;
   position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 .off-canvas-navbar {
   height: 50px;
