@@ -1,12 +1,4 @@
-<div class="selected-matter-jumbotron">
-    <div class="container text-center">
-        <h1>Matter Financial App</h1>
-
-        <p>Please select a matter from your subscribed matters list then select from one of the reports below .</p>
-
-        <!--<p><a class="btn btn-primary btn-lg">Learn more</a></p>-->
-    </div>
-</div>
+<panel-page-header selectedmatter="{{selectedMatter}}" selectedmattername={{selectedMatterName}} matterselected="{{matterSelected}}"></panel-page-header>
 <div class="report">
     <panel-matterlifetodate class="fill-parent" ctrl="MatterOverviewLifeToDateCtrl"></panel-matterlifetodate>
 </div>

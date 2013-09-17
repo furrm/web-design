@@ -1,6 +1,49 @@
 'use strict';
 
 angular.module('app.services', [])
+    .factory('matterInfoService', function(){
+        return{
+            "matterInfo":{
+                "matterBilling": {
+                    "budgetType": "",
+                    "budgetValue": "",
+                    "percentOfFeeBudgetBilled": "",
+                    "percentOfFeeBudgetReached": "",
+                    "billFees": "",
+                    "currency": ""
+                },
+                "matterStanding": {
+                    "matterId": "1111111111-2222222222",
+                    "matterCurrency": "GBP",
+                    "matterName": "OK - Servicing Agreement with Bedrock",
+                    "clientName": "OK Something Bank, N.A",
+                    "clientContact": "David A Fellowes-Freeman",
+                    "matterPartner": "Benny Hill",
+                    "matterManager": "Tom Jones",
+                    "matterDepartment": "Muppet Department",
+                    "matterOffice": "Planet Mars",
+                    "matterWorkType": "Outsourcing",
+                    "matterType": "Own Account",
+                    "openDate": "2010-07-16",
+                    "closeDate": ""
+                }
+            }
+//            ,
+//            getMatterInfo: function(matterId) {
+//                var deferred = $q.defer();
+//                $resource('apps/mfia/api/report/matterinfo/:matterId', { 'matterId': matterId })
+//                    .query(
+//                    function(data) {
+//                        $log.info('SUCCESS!!');
+//                        deferred.resolve(data);
+//                    }, function(response) {
+//                        $log.info('FAILED!!');
+//                        deferred.reject(response);
+//                    });
+//                return deferred.promise;
+//            }
+        }
+    })
     .factory('subscribedMatterService', function () {
         return{
             'items': [
@@ -323,7 +366,15 @@ angular.module('app.services', [])
         }
     })
     .factory('cacheService', function ($cacheFactory) {
-           return $cacheFactory('mfiaCache');
+        return $cacheFactory('mfiaCache');
+
+    })
+    .factory('authService', function () {
+        return {
+            "userLoggedIn": false,
+            "userName": '',
+            "password": ''
+        };
 
     })
 ;

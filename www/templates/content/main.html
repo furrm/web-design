@@ -1,12 +1,4 @@
-<div class="selected-matter-jumbotron">
-    <div class="container text-center">
-        <h1>Matter Financial App</h1>
-
-        <p>Please select a matter from your subscribed matters list then select from one of the reports below .</p>
-
-        <!--<p><a class="btn btn-primary btn-lg">Learn more</a></p>-->
-    </div>
-</div>
+<panel-page-header selectedmatter="{{selectedMatter}}" matterselected="{{matterSelected}}" matternameselected="{{selectedMatterName}}"></panel-page-header>
 <div class="container main-container">
     <!--<div class="well">-->
     <!--100% on body back on-->
@@ -19,8 +11,8 @@
     <!--</div>-->
     <div class="row">
         <div class="col-md-3">
-            <!--<panel-clickable name="Matter Information" href="#/matter-overview-life-to-date"></panel-clickable>-->
-               <panel-button name="Matter Information" status="{{matterInfoStatus}}" link="#/matter-overview-life-to-date"></panel-button>
+
+               <panel-button ng-disabled="matterInfoIsDisabled" name="Matter Information" status="{{matterInfoStatus}}" link="#/matter-info"></panel-button>
         </div>
         <div class="col-md-3">
             <panel-button name="Matter Overview Life To Date" status="{{matterOverviewLifeToDateStatus}}" link="#/matter-overview-life-to-date"></panel-button>

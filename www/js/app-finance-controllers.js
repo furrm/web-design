@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app.finance.controllers', [])
-    .controller('MatterInfoCtrl', function ($scope) {
+    .controller('MatterInfoCtrl', function ($scope, $q, $log, matterInfoService) {
         $scope.panelName = 'Matter Info';
 
         $scope.buttonClicked = 'Click my button ;-)';
@@ -22,6 +22,23 @@ angular.module('app.finance.controllers', [])
             }
 
         }
+
+        $scope.matterInfo =  matterInfoService.matterInfo;
+
+
+
+
+//            var matterInfoData = matterInfo.matterInfoService('123');
+//            matterInfoData.then(
+//                function (data) {
+//                    $log.info(data);
+//                    $scope.matterInfo = data;
+//                },
+//                function (response) {
+//                    $log.warn(response);
+//
+//                });
+
     })
     .controller('MatterOverviewLifeToDateCtrl', function ($scope, matterLifeToDateService) {
 

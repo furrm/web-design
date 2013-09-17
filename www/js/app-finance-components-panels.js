@@ -15,6 +15,21 @@ angular.module('app.finance.components.panels', [])
             name: 'ctrl'
         }
     })
+    .directive('panelMatterinfo', function(matterLifeToDateService, $timeout) {
+        return{
+            restrict: 'E',
+            replace: 'true',
+            scope: true,
+            templateUrl: 'templates/components/panel/panel-matterinfo.html',
+            require: '^offCanvas',
+            link: function (scope, element, attribute, appCtrl) {
+
+
+            },
+            controller: '@',
+            name: 'ctrl'
+        }
+    })
     .directive('panelMatterlifetodate', function(matterLifeToDateService, $timeout) {
         return{
             restrict: 'E',
@@ -110,6 +125,14 @@ angular.module('app.finance.components.panels', [])
 
         }
     })
+    .directive('panelBodyMatterinfo', function () {
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-body-matterinfo.html'
+
+        }
+    })
     .directive('panelBodyMatterlifetodate', function () {
         return{
             restrict: 'E',
@@ -168,7 +191,8 @@ angular.module('app.finance.components.panels', [])
             }
 
         }
-    }).directive('panelButton', function () {
+    })
+    .directive('panelButton', function () {
         return{
             restrict: 'E',
             replace: true,
@@ -184,6 +208,26 @@ angular.module('app.finance.components.panels', [])
                 name: '@',
                 status: '@',
                 link: '@'
+            }
+
+        }
+    }).directive('panelPageHeader', function () {
+        return{
+            restrict: 'E',
+            replace: true,
+            templateUrl: 'templates/components/panel/panel-page-header.html',
+            require: '^offCanvas',
+//            link:function($scope, $element, $attrs, $controller)
+//            {
+//                $scope.panelName = $attrs.name;
+//                console.write($attrs);
+//            }
+            scope: {
+//                Isolated scope.
+                selectedmatter: '@',
+                selectedclient: '@',
+                matterselected: '@',
+                matternameselected: '@'
             }
 
         }

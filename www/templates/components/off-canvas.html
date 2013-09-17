@@ -7,7 +7,24 @@
     <div id="content" ng-class=mainCss>
         <nav class="off-canvas-navbar off-canvas-navbar-default">
             <div class="off-canvas-nav">
-                <a href ng-click="toggleSideMenuState()"><i class="btn icon-reorder navbar-font-height"></i></a>
+                <div class="pull-left">
+                    <button href class="menu-activate-btn menu-activate-btn-default"
+                            ng-disabled="!authentication.userLoggedIn" ng-click="toggleSideMenuState()">
+                        <i class="icon-reorder navbar-font-height"></i></button>
+                </div>
+                <div class="pull-right">
+                    <ng-switch on="authentication.userLoggedIn">
+                        <a ng-click="toggleAuthentication('1', '', '')" href="#/signin" class="btn btn-default"
+                           ng-switch-when="true"><i class="icon-user"></i>&nbsp;{{authentication.userName}} - Sign
+                            Out</a>
+                        <a ng-click="toggleAuthentication('0', '', '')" href="#/signin" class="btn btn-default"
+                           ng-switch-when="false"><i class="icon-lock"></i>&nbsp;Sign In</a>
+
+
+                        <span ng-switch-default style="font-size:20px;">Something is wrong!</span>
+                    </ng-switch>
+
+                </div>
             </div>
         </nav>
         <div class="view-wrapper">

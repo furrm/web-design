@@ -4,11 +4,17 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             .when('/main', {
                 templateUrl: 'templates/content/main.html'
             })
+            .when('/signin', {
+                templateUrl: 'templates/content/sign-in.html'
+            })
             .when('/css', {
                 templateUrl: 'templates/content/css.html'
             })
             .when('/chart', {
                 templateUrl: 'templates/content/chart.html'
+            })
+            .when('/matter-info', {
+                templateUrl: 'templates/content/matter-info.html'
             })
             .when('/matter-overview-life-to-date', {
                 templateUrl: 'templates/content/matter-overview-life-to-date.html'
@@ -21,8 +27,14 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
             })
             .otherwise({redirectTo: '/main'});
     }])
-    .controller('AppCtrl', function ($scope, $timeout, matterLifeToDateService, workInProgressService, unpaidInvoiceService) {
+    .controller('AppCtrl', function ($scope, $timeout, matterLifeToDateService, workInProgressService, unpaidInvoiceService, authService) {
+
         $scope.name = 'App Controller';
+
+
+
+
+
 
         // Menu specific classes
         var sideMenuOpenCssClass = 'slide-menu slide-menu-vertical slide-menu-left slide-menu-open';
@@ -95,14 +107,45 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
 
         }
 
+        // Authentication Logic
+        // Actions:
+        // 1 - sign in
+        // 0 - sign out
+        $scope.authentication= authService;
+
+        $scope.toggleAuthentication = function(arg, username, password){
+//                     alert(arg);
+            if(arg === 0)
+            {
+                $scope.authentication.userLoggedIn = true;
+                $scope.authentication.userName =  username;
+                $scope.authentication.password =  password;
+
+                if(sideMenuIsOpen){this.toggleSideMenuState()} ;
+
+            }
+
+            if(arg == 1){
+                $scope.authentication.userLoggedIn = false;
+                $scope.authentication.userName =  username;
+                $scope.authentication.password =  password;
+            }
+
+
+        }
+
         $scope.matterNotSelected = 1;
 
 
-        $scope.downloadingData = false;
-        $scope.haveMatterOverviewLifeToDate = 0;
+//        $scope.downloadingData = false;
+        $scope.haveMatterInfo = false;
+        $scope.haveMatterOverviewLifeToDate = false;
         $scope.haveWorkInProgress = false;
         $scope.haveUnpaidInvoices = false;
 
+
+
+        $scope.matterSelected = 0; // Used to manipulate the page header (panel-page-header)...
 
         // DATA STATUS
         // 1 - Matter not selected...
@@ -115,7 +158,13 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
         $scope.workInProgressStatus = 1;
         $scope.unpaidInvoicesStatus = 1;
 
-        $scope.switchMatter = function (args) {
+        // BUTTON STATES
+        $scope.matterInfoIsDisabled = true;
+        $scope.matterOverviewLifeToDateIsDisabled = true;
+        $scope.workInProgressIsDisabled = true;
+        $scope.unpaidInvoicesIsDisabled = true;
+
+        $scope.switchMatter = function (matterNumber, matterName) {
 //
             // When switching over to a new matter, close the sliding menu...
             // Ok, the behaviour is different to the iOS app, but this could prevent a DoS attack on the services =)
@@ -124,14 +173,15 @@ angular.module('app', ['app.finance.controllers', 'app.components', 'app.finance
 //            $scope.maskCss = maskInactiveCssClass;
             this.toggleSideMenuState();
 
-            $scope.selectedMatter = args;
+            $scope.selectedMatter = matterNumber;
+            $scope.selectedMatterName = matterName;
 
-
-
+            $scope.matterSelected = 1;
 
             $scope.matterNotSelected = !$scope.matterNotSelected
 
             $scope.downloadingData = true;
+
 
 
             $scope.haveMatterOverviewLifeToDate = 0;
