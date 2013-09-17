@@ -13,14 +13,14 @@ angular.module('app.services', [])
                     "currency": ""
                 },
                 "matterStanding": {
-                    "matterId": "1111111111-2222222222",
+                    "matterId": "1847364378-1726352738",
                     "matterCurrency": "GBP",
-                    "matterName": "OK - Servicing Agreement with Bedrock",
-                    "clientName": "OK Something Bank, N.A",
+                    "matterName": "Servicing Agreement with Bedrock",
+                    "clientName": "Something or another Bank, N.A",
                     "clientContact": "David A Fellowes-Freeman",
                     "matterPartner": "Benny Hill",
                     "matterManager": "Tom Jones",
-                    "matterDepartment": "Muppet Department",
+                    "matterDepartment": "Department Zed",
                     "matterOffice": "Planet Mars",
                     "matterWorkType": "Outsourcing",
                     "matterType": "Own Account",
@@ -47,24 +47,6 @@ angular.module('app.services', [])
     .factory('subscribedMatterService', function () {
         return{
             'items': [
-                {
-                    "matterId": "PERSONAL-FURRM",
-                    "clientId": "PERSONAL",
-                    "clientName": "Client Number for Personal Matters",
-                    "matterNumber": "FURRM",
-                    "matterName": "Personal matter for FURRM",
-                    "matterNickName": "Personal matter for FURRM",
-                    "status": "Open"
-                },
-                {
-                    "matterId": "PERS_KH-FURRM",
-                    "clientId": "PERS_KH",
-                    "clientName": "Client Number for Personal Know-How Matters",
-                    "matterNumber": "FURRM",
-                    "matterName": "Personal Know-How matter for FURRM",
-                    "matterNickName": "Personal Know-How matter for FURRM",
-                    "status": "Open"
-                },
                 {
                     "matterId": "0017242123-0000010123",
                     "clientId": "0017242123",
@@ -102,11 +84,11 @@ angular.module('app.services', [])
                     "status": "Open"
                 },
                 {
-                    "matterId": "1111111111-2222222222",
+                    "matterId": "1847364378-1726352738",
                     "clientId": "1111111111",
-                    "clientName": "OK Something Bank, N.A",
+                    "clientName": "Something or another Bank, N.A",
                     "matterNumber": "2222222222",
-                    "matterName": "OK - Servicing Agreement with Bedrock",
+                    "matterName": "Servicing Agreement with Bedrock",
                     "matterNickName": "Nickname - OK - Servicing Agreement with Bedrock",
                     "status": "Open"
                 }
@@ -165,7 +147,7 @@ angular.module('app.services', [])
                      "percentage": ""
                  },
                  "matterStanding": {
-                     "matterId": "1111111111-2222222222",
+                     "matterId": "1847364378-1726352738",
                      "matterCurrency": "GBP",
                      "matterName": "OK - Servicing Agreement with Bedrock",
                      "clientName": "OK Something Bank, N.A",
@@ -280,7 +262,7 @@ angular.module('app.services', [])
                     ]
                 },
                 "matterStanding": {
-                    "matterId": "1111111111-2222222222",
+                    "matterId": "1847364378-1726352738",
                     "matterCurrency": "GBP",
                     "matterName": "OK - Servicing Agreement with Bedrock",
                     "clientName": "OK Something Bank, N.A",
@@ -348,7 +330,7 @@ angular.module('app.services', [])
                     "total": "100 %"
                 },
                 "matterStanding": {
-                    "matterId": "1111111111-2222222222",
+                    "matterId": "1847364378-1726352738",
                     "matterCurrency": "GBP",
                     "matterName": "OK - Servicing Agreement with Bedrock",
                     "clientName": "OK Something Bank, N.A",

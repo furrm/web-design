@@ -6234,8 +6234,6 @@ fieldset[disabled] .menu-activate-btn-default.active {
 .table-finance {
   width: 100%;
   margin-bottom: 20px;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 .table-finance thead > tr > th,
 .table-finance tbody > tr > th,
@@ -6466,6 +6464,8 @@ body {
 /*! kapcha start:navbar */
 .view-wrapper {
   height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .navbar {
   position: relative;
