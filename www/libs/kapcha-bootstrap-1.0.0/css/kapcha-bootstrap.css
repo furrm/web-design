@@ -6453,6 +6453,10 @@ fieldset[disabled] .menu-activate-btn-default.active {
   visibility: visible;
   font-size: 120px;
 }
+.add-touch-scroll {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 html,
 body {
   background-color: #8295a2;
@@ -6464,8 +6468,6 @@ body {
 /*! kapcha start:navbar */
 .view-wrapper {
   height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 .navbar {
   position: relative;
